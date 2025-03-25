@@ -48,6 +48,6 @@ def test_password_missing_special_character(client):
 
 # ✅ Valid password
 def test_password_valid(client):
-    resp = client.post("/v1/checkPassword", json={"password": "Valid1!"})
+    resp = client.post("/v1/checkPassword", json={"password": "Validfdsafds1!"})
     assert resp.status_code == 200
     assert resp.get_json()["valid"] is True
